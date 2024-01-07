@@ -1,0 +1,15 @@
+debug/biaozhun.o
+debug/chengxuyuan.o
+debug/huobi.o
+debug/kexue.o
+debug/main.o
+debug/mainwindow.o
+debug/riqi.o
+debug/rongliang.o
+debug/moc_biaozhun.o
+debug/moc_chengxuyuan.o
+debug/moc_huobi.o
+debug/moc_kexue.o
+debug/moc_mainwindow.o
+debug/moc_riqi.o
+debug/moc_rongliang.o

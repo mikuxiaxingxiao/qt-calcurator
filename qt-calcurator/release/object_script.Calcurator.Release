@@ -1,0 +1,15 @@
+release/biaozhun.o
+release/chengxuyuan.o
+release/huobi.o
+release/kexue.o
+release/main.o
+release/mainwindow.o
+release/riqi.o
+release/rongliang.o
+release/moc_biaozhun.o
+release/moc_chengxuyuan.o
+release/moc_huobi.o
+release/moc_kexue.o
+release/moc_mainwindow.o
+release/moc_riqi.o
+release/moc_rongliang.o
