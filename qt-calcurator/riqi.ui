@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>riqi</class>
+ <widget class="QWidget" name="riqi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>641</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>10000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>宋体</family>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>拉胯计算器</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+background-color: #F2F2F2; /* 设置背景颜色 */
+border: 1px solid #C3C3C3; /* 设置边框颜色 */
+padding: 8px 16px; /* 调整内边距 */
+font-family: &quot;Segoe UI&quot;, Arial, sans-serif; /* 使用Windows计算器常见的字体 */
+font-size: 14pt; /* 设置字体大小 */
+color: #333333; /* 设置文本颜色 */
+}
+
+QPushButton:hover {
+background-color: #E6E6E6; /* 鼠标悬停时设置背景颜色 */
+}
+
+QPushButton:pressed {
+background-color: #D9D9D9; /* 按下时设置背景颜色 */
+}
+
+QPushButton:disabled {
+background-color: #F2F2F2; /* 禁用时设置背景颜色 */
+color: #B2B2B2; /* 禁用时设置文本颜色 */
+}
+
+
+
+QRadioButton {
+spacing: 5px; /* 调整文本和选择框之间的间距 */
+color: #333333; /* 设置文本颜色 */
+}
+
+QRadioButton::indicator {
+width: 5px; /* 设置选择框的宽度 */
+height: 5rgb(240, 240, 240)px; /* 设置选择框的高度 */
+border: 2px solid #0078D4; /* 设置选择框的边框颜色 */
+}
+
+QRadioButton::indicator:checked {
+background-color: #0078D4; /* 设置选中时的背景颜色 */
+border: 2px solid #0078D4; /* 设置选中时的边框颜色 */
+}
+
+QRadioButton:hover {
+color: #0078D4; /* 鼠标悬停时设置文本颜色 */
+}
+
+
+QDateEdit {
+background-color: white;
+border: 1px solid #d9d9d9;
+padding: 5px;
+color: black;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit::drop-down {
+width: 20px;
+}
+
+
+
+QDateEdit QCalendarWidget {
+background-color: white;
+color: black;
+border: 1px solid #d9d9d9;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit QCalendarWidget QToolButton {
+color: black;
+background-color: white;
+border: 1px solid #d9d9d9;
+border-radius: 4px;
+}
+
+QDateEdit QCalendarWidget QToolButton:hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QToolButton::hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QWidget {
+alternate-background-color: #f0f0f0;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView {
+background-color: white;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:hover {
+color: black;
+background-color: #3399ff;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:selected {
+color: white;
+background-color: #3399ff;
+}
+
+
+	
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>411</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size: 13pt; /* 设置字体大小 */
+}</string>
+   </property>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDateEdit {
+background-color: white;
+border: 1px solid #d9d9d9;
+padding: 5px;
+color: black;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit::drop-down {
+width: 20px;
+}
+
+
+
+QDateEdit QCalendarWidget {
+background-color: white;
+color: black;
+border: 1px solid #d9d9d9;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit QCalendarWidget QToolButton {
+color: black;
+background-color: white;
+border: 1px solid #d9d9d9;
+border-radius: 4px;
+}
+
+QDateEdit QCalendarWidget QToolButton:hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QToolButton::hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QWidget {
+alternate-background-color: #f0f0f0;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView {
+background-color: white;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:hover {
+color: black;
+background-color: #3399ff;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:selected {
+color: white;
+background-color: #3399ff;
+}
+</string>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>16</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2024</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDateEdit {
+background-color: white;
+border: 1px solid #d9d9d9;
+padding: 5px;
+color: black;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit::drop-down {
+width: 20px;
+}
+
+
+
+QDateEdit QCalendarWidget {
+background-color: white;
+color: black;
+border: 1px solid #d9d9d9;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit QCalendarWidget QToolButton {
+color: black;
+background-color: white;
+border: 1px solid #d9d9d9;
+border-radius: 4px;
+}
+
+QDateEdit QCalendarWidget QToolButton:hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QToolButton::hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QWidget {
+alternate-background-color: #f0f0f0;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView {
+background-color: white;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:hover {
+color: black;
+background-color: #3399ff;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:selected {
+color: white;
+background-color: #3399ff;
+}
+</string>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>16</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2024</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>日期之间相隔时间</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>50</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>添加或减去天数</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>140</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDateEdit {
+background-color: white;
+border: 1px solid #d9d9d9;
+padding: 5px;
+color: black;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit::drop-down {
+width: 20px;
+}
+
+
+
+QDateEdit QCalendarWidget {
+background-color: white;
+color: black;
+border: 1px solid #d9d9d9;
+selection-background-color: #3399ff;
+selection-color: white;
+}
+
+QDateEdit QCalendarWidget QToolButton {
+color: black;
+background-color: white;
+border: 1px solid #d9d9d9;
+border-radius: 4px;
+}
+
+QDateEdit QCalendarWidget QToolButton:hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QToolButton::hover {
+background-color: #e6f7ff;
+}
+
+QDateEdit QCalendarWidget QWidget {
+alternate-background-color: #f0f0f0;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView {
+background-color: white;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:hover {
+color: black;
+background-color: #3399ff;
+}
+
+QDateEdit QCalendarWidget QAbstractItemView::item:selected {
+color: white;
+background-color: #3399ff;
+}
+</string>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>8</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2024</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始日期</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结束日期</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>91</width>
+      <height>78</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>差值</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>0天</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>90</y>
+      <width>96</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="text">
+        <string>添加</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="text">
+        <string>减去</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>340</y>
+      <width>181</width>
+      <height>78</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>日期</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>2024年1月1日</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>220</y>
+      <width>146</width>
+      <height>68</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>年</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>月</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_2"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>日</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_3"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

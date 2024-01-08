@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>rongliang</class>
+ <widget class="QWidget" name="rongliang">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>549</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>10000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>宋体</family>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>拉胯计算器</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+padding-left: 8px;
+padding-right: 24px;
+color: black; /* 修改文本颜色为黑色 */
+background-color: white; /* 修改背景颜色为白色 */
+border: 1px solid black; /* 边框样式 */
+border-radius: 4px;
+font-size: 14px;
+selection-background-color: rgb(200, 200, 200); /* 选中项背景颜色 */
+}
+
+QComboBox:hover {
+border: 1px solid rgb(100, 100, 100); /* 鼠标悬停时边框样式 */
+}
+
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-origin: padding;
+subcontrol-position: right;
+border: none;
+background-color: transparent;
+}
+
+
+QComboBox::down-arrow:hover {
+image: url(:/img/down_gray.png); /* 鼠标悬停时的下拉箭头图标，灰色 */
+}
+
+QComboBox QAbstractItemView {
+background-color: white;
+color: black;
+}
+
+QComboBox QAbstractItemView::item {
+height: 26px;
+font-size: 14px;
+}
+
+QComboBox QAbstractItemView::item:hover {
+background-color: rgb(200, 200, 200); /* 鼠标悬停时的下拉列表项背景颜色 */
+}
+
+QLabel{
+font-size: 35px;
+}
+</string>
+   </property>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>毫升</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方厘米</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>升</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方米</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方英寸</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方英尺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方码</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>品脱</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>夸脱</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>加仑</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+    font-family: &quot;Arial&quot;, sans-serif; /* 选择字体家族 */
+    font-size: 37px; /* 设置字体大小 */
+    color: black; /* 设置文本颜色 */
+}
+
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    width: 20px; /* 设置上下按钮的宽度 */
+    height: 20px; /* 设置上下按钮的高度 */
+}
+
+QDoubleSpinBox[readOnly=&quot;false&quot;] {
+    /* 设置允许输入的小数点后的位数为2位 */
+    decimals: 2;
+}
+
+</string>
+    </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <double>999999999.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>毫升</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方厘米</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>升</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方米</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方英寸</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方英尺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>立方码</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>品脱</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>夸脱</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>加仑</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_16">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>260</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>&lt;-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>440</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>320</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>440</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_15">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>260</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>CE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>320</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>500</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>500</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>0.0000000000</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

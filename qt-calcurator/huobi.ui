@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>huobi</class>
+ <widget class="QWidget" name="huobi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>10000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>宋体</family>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>拉胯计算器</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+padding-left: 8px;
+padding-right: 24px;
+color: black; /* 修改文本颜色为黑色 */
+background-color: white; /* 修改背景颜色为白色 */
+border: 1px solid black; /* 边框样式 */
+border-radius: 4px;
+font-size: 14px;
+selection-background-color: rgb(200, 200, 200); /* 选中项背景颜色 */
+}
+
+QComboBox:hover {
+border: 1px solid rgb(100, 100, 100); /* 鼠标悬停时边框样式 */
+}
+
+QComboBox::drop-down {
+width: 20px;
+height: 20px;
+subcontrol-origin: padding;
+subcontrol-position: right;
+border: none;
+background-color: transparent;
+}
+
+
+QComboBox::down-arrow:hover {
+image: url(:/img/down_gray.png); /* 鼠标悬停时的下拉箭头图标，灰色 */
+}
+
+QComboBox QAbstractItemView {
+background-color: white;
+color: black;
+}
+
+QComboBox QAbstractItemView::item {
+height: 26px;
+font-size: 14px;
+}
+
+QComboBox QAbstractItemView::item:hover {
+background-color: rgb(200, 200, 200); /* 鼠标悬停时的下拉列表项背景颜色 */
+}
+
+QLabel{
+font-size: 11px;
+}
+QLineEdit {
+    padding: 5px;
+    color: black;
+    background-color: white;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 4px;
+    font-size: 35px;
+}
+
+QLineEdit:hover {
+    border: 1px solid rgb(100, 100, 100);
+}
+
+QLineEdit:focus {
+    border: 2px solid rgb(0, 170, 255); /* 获得焦点时的边框颜色 */
+    background-color: rgb(240, 240, 240); /* 获得焦点时的背景颜色 */
+}
+
+QLineEdit:disabled {
+    background-color: rgb(220, 220, 220);
+}
+
+QLineEdit::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+QLineEdit::hover::placeholder {
+    color: rgb(100, 100, 100);
+}
+
+QLineEdit[readOnly=&quot;true&quot;] {
+    background-color: rgb(240, 240, 240);
+}
+
+QLineEdit[readOnly=&quot;true&quot;]:hover {
+    border: 1px solid rgb(220, 220, 220);
+}
+</string>
+   </property>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>中国-人民币</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>美国-美元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>哥伦比亚-比索</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>印度-卢比</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>欧洲-欧元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>日本-日元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>加拿大-元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>阿根廷-比索</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>香港-港元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>台湾-新台币</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1 中国-人民币 = 1 中国-人民币</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>中国-人民币</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>美国-美元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>哥伦比亚-比索</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>印度-卢比</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>欧洲-欧元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>日本-日元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>加拿大-元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>阿根廷-比索</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>香港-港元</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>台湾-新台币</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>500</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>440</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>440</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>380</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>380</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>320</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>320</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_11">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>260</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_12">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>260</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>500</y>
+      <width>80</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>.</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
